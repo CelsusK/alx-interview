@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""
-0. Pascal's Triangle
-"""
 def pascal_triangle(n):
     """Generate Pascal's triangle up to the nth row."""
     if n <= 0:
-        return []
+        return []  # Return an empty list for n <= 0
 
     triangle = []  # Initialize an empty list to hold the rows of the triangle
 
@@ -21,10 +18,9 @@ def pascal_triangle(n):
 
     return triangle
 
-# Example usage:
-rows = 5
-triangle = pascal_triangle(rows)
-for row in triangle:
-    print(row)
-
-
+# Example usage to test the function
+if __name__ == "__main__":
+    # You can test the function using the provided test script
+    triangle = pascal_triangle(5)
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
